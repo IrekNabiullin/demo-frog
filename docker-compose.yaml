@@ -1,0 +1,18 @@
+version: '3'
+services:
+  demo-frog-app:
+    image: ireknabi/demo-frog
+    ports:
+      - 8080:8080
+    links:
+      - demo-api-db
+  demo-frog-db:
+    image: 'postgres:12'
+    container_name: 'java-pg'
+    restart: always
+    ports:
+      - '5432:5432'
+    environment:
+      - 'POSTGRES_USER=admin'
+      - 'POSTGRES_HOST_AUTH_METHOD=trust'
+      - 'POSTGRES_DB=demo-api-db'

@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: demo-frog
+    sql:
+      init:
+        mode=always
+    ports:
+      - 8080:8080
+  jpa:
+    database-platform:
+      org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: jdbc:postgresql://demo-frog-db:5444/demo-api-db
+    username: admin
+    password: admin
