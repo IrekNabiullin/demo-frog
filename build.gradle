@@ -24,12 +24,12 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.flywaydb:flyway-core'
+//	implementation 'de.codecentric:spring-boot-admin-starter-client'
+	implementation 'org.springdoc:springdoc-openapi-ui:1.6.15'
 	compileOnly 'org.projectlombok:lombok'
-	developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
 	runtimeOnly 'org.postgresql:postgresql'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation group: 'org.testcontainers', name: 'postgresql', version: '1.18.3'
 	implementation group: 'javax.persistence', name: 'javax.persistence-api', version: '2.2'
 
 

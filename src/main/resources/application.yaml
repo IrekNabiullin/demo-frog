@@ -5,11 +5,13 @@ spring:
       init:
         mode=always
     ports:
-      - 8080:8080
+      - 8081:8081
   jpa:
     database-platform:
       org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto=create
   datasource:
-    url: jdbc:postgresql://demo-frog-db:5444/demo-api-db
+    url: jdbc:postgresql://demo-api-db:5432/mydb
     username: admin
     password: admin
